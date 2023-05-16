@@ -1,0 +1,19 @@
+@use "@/styles/scss" as *;
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 10px 40px;
+    padding: 25px 30px;
+    color: $white;
+    background: $primary;
+
+    a {
+        color: $white;
+        text-decoration: none;
+
+        &:hover {
+            color: $gray-light;
+        }
+    }
+}
