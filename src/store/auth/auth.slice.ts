@@ -17,11 +17,16 @@ export const authSlice = createSlice({
     name: "auth",
     initialState,
     reducers: {
-        auth(state, action: PayloadAction<ILoginForm>) {
+        login(state, action: PayloadAction<ILoginForm>) {
             const { idInstance, apiTokenInstance } = action.payload;
             state.isAuth = true;
             state.idInstance = idInstance;
             state.apiTokenInstance = apiTokenInstance;
+        },
+        logout(state) {
+            state.isAuth = false;
+            state.idInstance = "";
+            state.apiTokenInstance = "";
         },
     },
 });
