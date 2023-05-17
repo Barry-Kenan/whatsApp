@@ -2,17 +2,16 @@ import { LoginForm } from "@/components";
 import styles from "./TopPage.module.scss";
 import cn from "classnames";
 import { Card } from "@mui/material";
-import { useAppSelector } from "@/hooks/redux";
-import { useRouter } from "next/router";
 import { TopPageProps } from "./TopPage.props";
+import { useActions } from "@/hooks/actions";
 
-const TopPage = ({ className, ...props }: TopPageProps): JSX.Element => {
-    const { push } = useRouter();
-    const { isAuth } = useAppSelector((state) => state.auth);
+const TopPage = ({ data, className, ...props }: TopPageProps): JSX.Element => {
+    const { login } = useActions();
 
-    if (isAuth) {
-        push("/chat");
+    if (data.id && data.token) {
+        login({ idInstance: data.id, apiTokenInstance: data.token });
     }
+
     return (
         <div className={cn(className, styles.wrapper)} {...props}>
             <Card className={styles.card}>
