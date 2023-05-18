@@ -4,12 +4,9 @@ import { LayoutProps } from "./Layout.props";
 import { Provider } from "react-redux";
 import Footer from "./Footer/Footer";
 import { store } from "@/store";
-import dynamic from "next/dynamic";
+import Header from "./Header/Header";
 
 const Layout = ({ children }: LayoutProps): JSX.Element => {
-    const Header = dynamic(() => import("./Header/Header"), {
-        ssr: false,
-    });
     return (
         <div className={styles.wrapper}>
             <Header className={styles.header} />

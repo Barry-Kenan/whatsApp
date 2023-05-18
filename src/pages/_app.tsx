@@ -28,6 +28,12 @@ export default function MyApp(props: MyAppProps) {
                     name="viewport"
                     content="initial-scale=1, width=device-width"
                 />
+                <link rel="preconnect" href="https://fonts.googleapis.com" />
+                <link
+                    rel="preconnect"
+                    href="https://fonts.gstatic.com"
+                    crossOrigin="anonymous"
+                />
             </Head>
             <ThemeProvider theme={theme}>
                 {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
