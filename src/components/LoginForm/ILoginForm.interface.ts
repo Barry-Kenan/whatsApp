@@ -3,6 +3,6 @@ export interface ILoginForm {
     apiTokenInstance: string;
 }
 
-export interface ILoginSentResponse {
+export interface IGetStateInstanceResponse {
     stateInstance: string;
 }
