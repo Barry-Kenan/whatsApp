@@ -40,7 +40,7 @@ Next.js , Typescript, Redux Toolkit, RTK Query, axios, scss, react-hook-form, js
 ## Алгоритм действий
 
 -   Настроить получения уведомлений GREEN-API
-    ![App Screenshot](<https://github.com/Barry-Kenan/top-app/blob/0606f1d71ed275db92db425f270ec7ec080f5a03/top-app-demo.web.app_courses_photoshop%20(2).png>)
+    ![App Screenshot](<https://github.com/Barry-Kenan/whatsApp/blob/main/screens-for-readme/app6.png?raw=true>)
 -   Пользователь переходит на сайт чата и вводит свои учетные данные из системы GREEN-API (idInstance, apiTokenInstance)
 -   Пользователь вводит номер телефона получателя и создает новый чат (телефонный номер в формате 81234567890)
 -   Пользователь пишет текстовое сообщение и отправляет его получателю в
@@ -49,3 +49,8 @@ Next.js , Typescript, Redux Toolkit, RTK Query, axios, scss, react-hook-form, js
 -   Пользователь видит ответ получателя в чате
 
 ## Screenshots
+![App Screenshot](<https://github.com/Barry-Kenan/whatsApp/blob/main/screens-for-readme/app1.png?raw=true>)
+![App Screenshot](<https://github.com/Barry-Kenan/whatsApp/blob/main/screens-for-readme/app2.png?raw=true>)
+![App Screenshot](<https://github.com/Barry-Kenan/whatsApp/blob/main/screens-for-readme/app3.png?raw=true>)
+![App Screenshot](<https://github.com/Barry-Kenan/whatsApp/blob/main/screens-for-readme/app4.png?raw=true>)
+![App Screenshot](<https://github.com/Barry-Kenan/whatsApp/blob/main/screens-for-readme/app5.png?raw=true>)
