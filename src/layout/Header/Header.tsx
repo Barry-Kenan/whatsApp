@@ -4,26 +4,20 @@ import styles from "./Header.module.scss";
 import cn from "classnames";
 import { Button } from "@mui/material";
 import Link from "next/link";
-import axios from "axios";
 import { useAppSelector } from "@/hooks/redux";
 import { useActions } from "@/hooks/actions";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import { authApi } from "@/helpers/api/api";
 
 const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
     const { isAuth } = useAppSelector((state) => state.auth);
     const { logout } = useActions();
-    const handleSubmit = () => {
-        axios.post(
-            "api/auth/logout",
-            {},
-            {
-                headers: {
-                    "Content-Type": "application/json",
-                },
-            }
-        );
-        logout();
+    const handleSubmit = async () => {
+        const success = await authApi.logout();
+        if (success) {
+            logout();
+        }
     };
 
     return (

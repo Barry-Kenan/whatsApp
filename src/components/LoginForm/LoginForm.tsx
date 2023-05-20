@@ -4,11 +4,11 @@ import styles from "./LoginForm.module.scss";
 import cn from "classnames";
 import { useForm } from "react-hook-form";
 import { ILoginForm } from "./ILoginForm.interface";
-import axios from "axios";
 import CloseIcon from "@mui/icons-material/Close";
 import { useActions } from "@/hooks/actions";
 import { LoginFormProps } from "./LoginForm.props";
 import { useRouter } from "next/router";
+import { authApi } from "@/helpers/api/api";
 
 const LoginForm = ({ className, ...props }: LoginFormProps) => {
     const { login: auth } = useActions();
@@ -23,12 +23,8 @@ const LoginForm = ({ className, ...props }: LoginFormProps) => {
     } = useForm<ILoginForm>();
 
     const onSubmit = async (formData: ILoginForm) => {
-        const login = await axios.post("api/auth/login", formData, {
-            headers: {
-                "Content-Type": "application/json",
-            },
-        });
-        if (login.data.message == "authorized") {
+        const message = await authApi.login(formData);
+        if (message == "authorized") {
             auth(formData);
             reset();
             push("/chat");
