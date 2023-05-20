@@ -1,0 +1,9 @@
+@use "@/styles/scss" as *;
+.contact {
+    background-color: $background-lighter;
+    display: flex;
+    justify-content: space-between;
+    padding: 7px;
+    cursor: pointer;
+    height: 40px;
+}
