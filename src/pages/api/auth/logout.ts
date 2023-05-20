@@ -5,7 +5,12 @@ export default async function logout(
     req: NextApiRequest,
     res: NextApiResponse
 ) {
-    axios.post(process.env.NEXT_DB + "/login", {});
-
-    res.status(200).json({ success: true });
+    try {
+        const post = await axios.post(process.env.NEXT_DB + "/login", {});
+        if (post.status == 201) {
+            res.status(200).json({ success: true });
+        }
+    } catch (error) {
+        res.json({ message: "unauthorized" });
+    }
 }
