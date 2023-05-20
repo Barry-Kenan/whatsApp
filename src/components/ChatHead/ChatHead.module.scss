@@ -1,0 +1,8 @@
+@use "@/styles/scss" as *;
+.wrapper {
+    background-color: $background-lighter;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    color: $white;
+}
