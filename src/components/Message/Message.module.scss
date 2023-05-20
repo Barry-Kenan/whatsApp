@@ -1,0 +1,23 @@
+@use "@/styles/scss" as *;
+.message {
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    width: 100%;
+    margin: 5px 0;
+
+    &.from {
+        justify-content: flex-end;
+    }
+    &.to {
+        justify-content: flex-start;
+    }
+
+    p {
+        text-align: right;
+        max-width: 65%;
+        padding: 12px;
+        background: $background-lighter;
+        border-radius: 10px;
+    }
+}
