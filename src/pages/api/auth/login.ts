@@ -1,4 +1,4 @@
-import { ILoginSentResponse } from "@/components/LoginForm/ILoginForm.interface";
+import { IGetStateInstanceResponse } from "@/components/LoginForm/ILoginForm.interface";
 import axios from "axios";
 import { NextApiRequest, NextApiResponse } from "next";
 import { sign } from "jsonwebtoken";
@@ -9,7 +9,7 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
     const { idInstance, apiTokenInstance } = req.body;
 
     try {
-        const { data } = await axios.get<ILoginSentResponse>(
+        const { data } = await axios.get<IGetStateInstanceResponse>(
             `https://api.green-api.com/waInstance${idInstance}/getStateInstance/${apiTokenInstance}`
         );
 
