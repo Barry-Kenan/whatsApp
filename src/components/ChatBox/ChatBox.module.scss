@@ -1,25 +1,27 @@
 @use "@/styles/scss" as *;
 
 .wrapper {
-    display: grid;
-    height: 100%;
-    grid-template:
-        "h" auto
-        "b" 1fr
-        "f" auto;
+	display: grid;
+	grid-template:
+		"h" auto
+		"b" 1fr
+		"f" auto;
+	height: 100%;
 
-    .head {
-        grid-area: h;
-    }
-    .chatBox {
-        grid-area: b;
-        width: 100%;
-        max-height: calc(100% - 70px);
-        overflow-y: auto;
-    }
-    .foot {
-        grid-area: f;
-        background-color: $background-lighter;
-        border-radius: 5px;
-    }
+	.head {
+		grid-area: h;
+	}
+
+	.chatBox {
+		grid-area: b;
+		width: 100%;
+		max-height: calc(100% - 70px);
+		overflow-y: auto;
+	}
+
+	.foot {
+		grid-area: f;
+		background-color: $background-lighter;
+		border-radius: 5px;
+	}
 }

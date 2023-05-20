@@ -1,19 +1,21 @@
 @use "@/styles/scss" as *;
-.wrapper {
-    color: $white;
-    padding: 10px;
-    display: grid;
-    height: 100%;
-    grid-template: "contacts chats" 100%/ 400px auto;
-    .contacts {
-        grid-area: contacts;
-        background-color: $background-deeper;
-        overflow-y: auto;
-    }
 
-    .chats {
-        grid-area: chats;
-        padding: 10px;
-        background-color: black;
-    }
+.wrapper {
+	display: grid;
+	grid-template: "contacts chats" 100%/ 400px auto;
+	height: 100%;
+	padding: 10px;
+	color: $white;
+
+	.contacts {
+		grid-area: contacts;
+		overflow-y: auto;
+		background-color: $background-deeper;
+	}
+
+	.chats {
+		grid-area: chats;
+		padding: 10px;
+		background-color: black;
+	}
 }

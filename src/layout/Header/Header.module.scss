@@ -1,20 +1,21 @@
 @use "@/styles/scss" as *;
+
 .header {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 5px;
-    margin-top: 15px;
-    align-items: center;
-    padding: 5px;
-    border-bottom: 2px solid $primary;
+	display: grid;
+	grid-template-columns: 1fr auto;
+	gap: 5px;
+	align-items: center;
+	margin-top: 15px;
+	padding: 5px;
+	border-bottom: 2px solid $primary;
 
-    .nav {
-        display: flex;
-        gap: 5px;
-    }
+	.nav {
+		display: flex;
+		gap: 5px;
+	}
 
-    .logout {
-        display: flex;
-        gap: 5px;
-    }
+	.logout {
+		display: flex;
+		gap: 5px;
+	}
 }

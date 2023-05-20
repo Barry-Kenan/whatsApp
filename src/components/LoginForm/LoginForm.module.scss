@@ -1,10 +1,11 @@
 @use "@/styles/scss" as *;
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
 
-    input {
-        color: $white;
-    }
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	input {
+		color: $white;
+	}
 }

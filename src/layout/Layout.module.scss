@@ -1,21 +1,22 @@
 @use "@/styles/scss" as *;
 
 .wrapper {
-    display: grid;
-    grid-template:
-        "header" auto
-        "body" calc(100vh - 165px)
-        "footer" auto;
-    gap: 10px;
-    .header {
-        grid-area: header;
-    }
+	display: grid;
+	grid-template:
+		"header" auto
+		"body" calc(100vh - 165px)
+		"footer" auto;
+	gap: 10px;
 
-    .body {
-        grid-area: body;
-    }
+	.header {
+		grid-area: header;
+	}
 
-    .footer {
-        grid-area: footer;
-    }
+	.body {
+		grid-area: body;
+	}
+
+	.footer {
+		grid-area: footer;
+	}
 }
