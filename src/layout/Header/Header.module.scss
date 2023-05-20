@@ -2,8 +2,8 @@
 .header {
     display: grid;
     grid-template-columns: 1fr auto;
-    gap: 10px;
-    margin: 15px 0 0;
+    gap: 5px;
+    margin-top: 15px;
     align-items: center;
     padding: 5px;
     border-bottom: 2px solid $primary;

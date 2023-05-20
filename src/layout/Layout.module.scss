@@ -3,12 +3,10 @@
 .wrapper {
     display: grid;
     grid-template:
-        "header header header" auto
-        ". body ." 1fr
-        "footer footer  footer" auto
-        / auto minmax(320px, 1200px) auto;
-    gap: 40px 30px;
-    height: 100vh;
+        "header" auto
+        "body" calc(100vh - 165px)
+        "footer" auto;
+    gap: 10px;
     .header {
         grid-area: header;
     }
