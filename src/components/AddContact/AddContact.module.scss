@@ -1,0 +1,16 @@
+@use "@/styles/scss" as *;
+
+.search {
+    background-color: $background-lighter;
+    border-radius: 10px;
+    width: 100%;
+    input {
+        color: white;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        /* display: none; <- Crashes Chrome on hover */
+        -webkit-appearance: none;
+        margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    }
+}
